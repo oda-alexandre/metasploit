@@ -1,6 +1,6 @@
 # METASPLOIT
 
-<img src="https://blog.zenika.com/wp-content/uploads/2017/07/metasploit.png" width="200" height="200"/>
+<img src="https://assets.gitlab-static.net/uploads/-/system/project/avatar/16791371/metasploit.png" width="200" height="200"/>
 
 
 ## INDEX
