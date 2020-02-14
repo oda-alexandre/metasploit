@@ -1,24 +1,19 @@
 FROM debian:stretch-slim
 
-LABEL authors https://www.oda-alexandre.com/
+LABEL authors https://www.oda-alexandre.com
 
 ENV USER metasploit
 ENV HOME /home/${USER}
-ENV LOCALES fr_FR.UTF-8
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m' && \
   apt-get update && apt-get install --no-install-recommends -y \
   sudo \
-  locales \
   ca-certificates \
   apt-transport-https \
   software-properties-common \
   gnupg \
   curl
-
-RUN echo -e '\033[36;1m ******* CHANGE LOCALES ******** \033[0m' && \
-  locale-gen ${LOCALES}
 
 RUN echo -e '\033[36;1m ******* ADD USER ******** \033[0m' && \
   useradd -d ${HOME} -m ${USER} && \
