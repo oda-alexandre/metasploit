@@ -1,7 +1,6 @@
 # METASPLOIT
 
-<img src="https://assets.gitlab-static.net/uploads/-/system/project/avatar/16791371/metasploit.png" width="200" height="200"/>
-
+![logo](https://assets.gitlab-static.net/uploads/-/system/project/avatar/16791371/metasploit.png=200x200)
 
 ## INDEX
 
@@ -14,16 +13,13 @@
   - [INSTALL](#install)
   - [LICENSE](#license)
 
-
 ## BADGES
 
 [![pipeline status](https://gitlab.com/oda-alexandre/metasploit/badges/master/pipeline.svg)](https://gitlab.com/oda-alexandre/metasploit/commits/master)
 
-
 ## FIRST UPDATE
 
 Date: 01-01-01
-
 
 ## INTRODUCTION
 
@@ -39,16 +35,13 @@ Automatically updated on :
 
 - [docker hub public](https://hub.docker.com/r/alexandreoda/metasploit)
 
-
 ## PREREQUISITES
 
 Use [docker](https://www.docker.com)
 
-
 ## INSTALL
 
 ```docker run -ti --rm --name metasploit -v ${HOME}:/home/metasploit --network host alexandreoda/metasploit```
-
 
 ## LICENSE
 
