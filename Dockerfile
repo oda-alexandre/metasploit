@@ -13,7 +13,14 @@ RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m' && \
   apt-transport-https \
   software-properties-common \
   gnupg \
-  curl
+  curl \
+  && \
+  echo -e '\033[36;1m ******* CLEANING ******** \033[0m' && \
+  apt-get --purge autoremove -y && \
+  apt-get autoclean -y && \
+  rm /etc/apt/sources.list && \
+  rm -rf /var/cache/apt/archives/* && \
+  rm -rf /var/lib/apt/lists/*
 
 RUN echo -e '\033[36;1m ******* ADD USER ******** \033[0m' && \
   useradd -d ${HOME} -m ${USER} && \
@@ -30,12 +37,6 @@ RUN echo -e '\033[36;1m ******* INSTALL APP ******** \033[0m' && \
   curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && \
   chmod 755 msfinstall && \
   ./msfinstall
-
-RUN echo -e '\033[36;1m ******* CLEANING ******** \033[0m' && \
-  sudo apt-get --purge autoremove -y && \
-  sudo rm /etc/apt/sources.list && \
-  sudo rm -rf /var/cache/apt/archives/* && \
-  sudo rm -rf /var/lib/apt/lists/*
 
 RUN echo -e '\033[36;1m ******* CONTAINER START COMMAND ******** \033[0m'
 CMD msfupdate && /bin/bash
