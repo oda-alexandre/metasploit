@@ -10,6 +10,8 @@
   - [INTRODUCTION](#introduction)
   - [PREREQUISITES](#prerequisites)
   - [INSTALL](#install)
+    - [DOCKER RUN](#docker-run)
+    - [DOCKER COMPOSE](#docker-compose)
   - [LICENSE](#license)
 
 ## BADGES
@@ -24,7 +26,7 @@ Docker image of :
 
 Continuous integration on :
 
-- [gitlab](https://gitlab.com/oda-alexandre/metasploit/pipelines)
+- [gitlab pipelines](https://gitlab.com/oda-alexandre/metasploit/pipelines)
 
 Automatically updated on :
 
@@ -36,7 +38,26 @@ Use [docker](https://www.docker.com)
 
 ## INSTALL
 
-```docker run -ti --rm --name metasploit -v ${HOME}:/home/metasploit --network host alexandreoda/metasploit```
+### DOCKER RUN
+
+```docker run -ti --rm --name metasploit -v ${HOME}:/home/metasploit --network host alexandreoda/metasploit
+```
+
+### DOCKER COMPOSE
+
+```yml
+version: "3.7"
+
+services:
+  metasploit:
+    container_name: metasploit
+    image: alexandreoda/metasploit
+    restart: no
+    network_mode: host
+    privileged: false
+    volumes:
+      - "${HOME}:/home/metasploit"
+```
 
 ## LICENSE
 
