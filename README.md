@@ -41,7 +41,11 @@ Use [docker](https://www.docker.com)
 ### DOCKER RUN
 
 ```\
-docker  run -ti --rm --name metasploit -v ${HOME}:/home/metasploit --network host alexandreoda/metasploit
+docker run -ti --rm \
+--name metasploit \
+--network host \
+-v ${HOME}:/home/metasploit \
+alexandreoda/metasploit
 ```
 
 ### DOCKER COMPOSE
