@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  metasploit:
+    container_name: metasploit
+    image: alexandreoda/metasploit
+    restart: no
+    network_mode: host
+    privileged: false
+    volumes:
+      - "${HOME}:/home/metasploit"
