@@ -2,8 +2,6 @@
 
 ![logo](https://assets.gitlab-static.net/uploads/-/system/project/avatar/16791371/metasploit.png=200x200)
 
-## INDEX
-
 - [METASPLOIT](#metasploit)
   - [INDEX](#index)
   - [BADGES](#badges)
@@ -36,7 +34,7 @@ Automatically updated on :
 
 Use [docker](https://www.docker.com)
 
-## INSTALL
+## BUILD
 
 ### DOCKER RUN
 
